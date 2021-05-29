@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import "./App.css";
-import video1 from './assets/bg-video-1.mp4';
-import video2 from './assets/bg-video-2.mp4';
-import video3 from './assets/bg-video-3.mp4';
-import video4 from './assets/bg-video-4.mp4';
-import video5 from './assets/bg-video-5.mp4';
+import video1 from './assets/video/bg-video-1.mp4';
+import video2 from './assets/video/bg-video-2.mp4';
+import video3 from './assets/video/bg-video-3.mp4';
+import video4 from './assets/video/bg-video-4.mp4';
+import video5 from './assets/video/bg-video-5.mp4';
 
 const BgRain = () => {
 
