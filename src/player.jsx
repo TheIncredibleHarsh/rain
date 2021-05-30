@@ -8,11 +8,11 @@ import sea from './assets/audio/sea.wav';
 
 const Player = () => {
     const tracks = [
-        { name: "city", file: city, volume: 0.0 },
-        { name: "people", file: people, volume: 0.0 },
-        { name: "rain", file: rain, volume: 0.0 },
-        { name: "river", file: river, volume: 0.0 },
-        { name: "sea", file: sea, volume: 0.0 }
+        { name: "City", file: city, volume: 0.0 },
+        { name: "People", file: people, volume: 0.0 },
+        { name: "Rain", file: rain, volume: 0.0 },
+        { name: "River", file: river, volume: 0.0 },
+        { name: "Sea", file: sea, volume: 0.0 }
     ]
 
     useEffect(() => {
@@ -25,6 +25,14 @@ const Player = () => {
         // let audioInstance = document.getElementById
         var targetVolume = event.target.value;
         event.target.parentElement.parentElement.firstChild.volume = targetVolume;
+    }
+
+    const ToggleFullScreen = () => {
+        if(document.fullscreenElement === null){
+            document.querySelector("body").requestFullscreen()
+        } else{
+            document.exitFullscreen()
+        }
     }
 
     return <div className="players-container">
@@ -41,6 +49,9 @@ const Player = () => {
                 </div>
             </div>
         })}
+        <div className="full-screen-button">
+            <button onClick={ToggleFullScreen}>Toggle full screen</button>
+        </div>
     </ div>
 }
 

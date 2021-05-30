@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import "./App.css";
-import video1 from './assets/video/bg-video-1.mp4';
-import video2 from './assets/video/bg-video-2.mp4';
-import video3 from './assets/video/bg-video-3.mp4';
-import video4 from './assets/video/bg-video-4.mp4';
-import video5 from './assets/video/bg-video-5.mp4';
 
 const BgRain = () => {
 
-    // const [bgVideo, setBgVideo] = useState();
+    const bucketLink = "https://theincredibleharsh-rain.s3-us-west-2.amazonaws.com";
 
-    var bgVideos = [video1, video2, video3, video4, video5];
+    var videos = [
+        {name: "video1", url: bucketLink + "/video1.mp4"},
+        {name: "video2", url: bucketLink + "/video2.mp4"},
+        {name: "video3", url: bucketLink + "/video3.mp4"},
+        {name: "video4", url: bucketLink + "/video4.mp4"},
+        {name: "video5", url: bucketLink + "/video5.mp4"}
+    ]
 
     // setBgVideo(video1);
 
     return <>
         <div className="bg-rain-container">
             <video id="bg-video" autoPlay loop muted>
-                <source src={bgVideos[Math.ceil(Math.random()*6)]} type="video/mp4" />
+                <source src={videos[Math.floor(Math.random()*5)].url} type="video/mp4" />
             </video>
         </div>
         <div className="bg-overlay" />
