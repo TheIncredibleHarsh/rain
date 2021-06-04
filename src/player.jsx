@@ -10,7 +10,7 @@ const Player = () => {
     const tracks = [
         { name: "City", file: city, volume: 0.0 },
         { name: "People", file: people, volume: 0.0 },
-        { name: "Rain", file: rain, volume: 0.0 },
+        { name: "Rain", file: rain, volume: 0.7 },
         { name: "River", file: river, volume: 0.0 },
         { name: "Sea", file: sea, volume: 0.0 }
     ]
