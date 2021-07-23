@@ -8,11 +8,11 @@ import sea from './assets/audio/sea.wav';
 
 const Player = () => {
     const tracks = [
-        { name: "City", file: city, volume: 0.0 },
+        { name: "City", file: city, volume: 0.0     },
         { name: "People", file: people, volume: 0.0 },
-        { name: "Rain", file: rain, volume: 0.0 },
-        { name: "River", file: river, volume: 0.0 },
-        { name: "Sea", file: sea, volume: 0.0 }
+        { name: "Rain", file: rain, volume: 0.0     },
+        { name: "River", file: river, volume: 0.0   },
+        { name: "Sea", file: sea, volume: 0.0       }
     ]
 
     useEffect(() => {
@@ -51,6 +51,10 @@ const Player = () => {
         })}
         <div className="full-screen-button">
             <button onClick={ToggleFullScreen}>Toggle full screen</button>
+        </div>
+        <br /><br />
+        <div className="youtube-player">
+            <iframe width="300" height="250" src="https://www.youtube.com/embed/5qap5aO4i9A?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
         </div>
     </ div>
 }
