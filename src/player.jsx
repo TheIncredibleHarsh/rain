@@ -39,7 +39,7 @@ const Player = () => {
         {tracks.map((track) => {
             return <div className="single-player-container">
                 <audio volume="0.1" autoPlay loop className={track.name+"_element"}>
-                    <source src={track.file} />
+                    <source src={track.file} type="audio/wav" />
                 </audio>
                 <div className="name-container">
                     <span>{track.name}</span>
